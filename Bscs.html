@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<!-- new class ="nav" para ihide yung brown bar pag open yung photo-->
+<nav class="nav"> <!-- Add a class to the nav element -->
+    <ul>
+        <li><a href = "#"> Home </a></li>
+        <li><a href = "#"> News </a></li>
+    </ul>
+</nav>
+<body>
+    
+    <div class="full-img" id="fullImgBox">
+        <img src="BSCS/sei.jpg" id="fullImg">
+        <span onclick="closefullImg()">x</span>
+        <div class="description" id="descriptionBox">
+            <p id="descriptionText"></p>
+        </div>
+    </div>
+    <div class="BSCS">
+        <img src="BSCS/sei.jpg" onclick="openfullImg(this.src, 'Tinakbo pati 50 pesos')"> 
+        <img src="BSCS/crys.jpg" onclick="openfullImg(this.src, 'Kuya ko may iphone 12 fully paid')">
+        <img src="BSCS/majoe.jpg" onclick="openfullImg(this.src, 'Pinagpalit sa Malapit Pinagpalit sa Malapit Pinagpalit sa Malapit Pinagpalit sa Malapit Pinagpalit sa Malapit Pinagpalit sa Malapit ')">
+        <img src="BSCS/izza.jpg" onclick="openfullImg(this.src, 'Besfriend ko lang yon')">
+        <img src="BSCS/stef.jpg" onclick="openfullImg(this.src, 'Dala kayo ID')">
+        <img src="BSCS/sam.jpg" onclick="openfullImg(this.src, 'Siya lang pahinga ko')">
+        <img src="BSCS/pat.jpg" onclick="openfullImg(this.src, 'Sikmurahan kita jek')">
+        <img src="BSCS/russ.jpg" onclick="openfullImg(this.src, 'BOBO KA MAG MINSITHAR')">
+        <img src="BSCS/jek.jpg" onclick="openfullImg(this.src, 'Gusto mo QwekQwek Pahawak muna')">
+        <img src="BSCS/mj.jpg" onclick="openfullImg(this.src, 'Dito tayo sa mahal kasi hindi ako mahal EO')">
+        <img src="BSCS/jorick.jpg" onclick="openfullImg(this.src, 'Di mo masilip ang')">
+        <img src="BSCS/kurt.jpg" onclick="openfullImg(this.src, 'Dito muna ako pre')">
+        <img src="BSCS/lean.jpg" onclick="openfullImg(this.src, 'Una na ako')">
+
+    </div>
+
+    <script>
+         var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+        var descriptionBox = document.getElementById("descriptionBox");
+        var descriptionText = document.getElementById("descriptionText");
+
+        function openfullImg(pic, description){
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+            descriptionText.innerHTML = description;
+            descriptionBox.style.display = "block";
+            document.querySelector('.nav').classList.add('hide-nav'); // Add this line to add the hide-nav class to nav
+        }
+        function closefullImg(){
+            fullImgBox.style.display = "none";
+            descriptionBox.style.display = "none";
+            document.querySelector('.nav').classList.remove('hide-nav'); // Add this line to remove the hide-nav class from nav
+        }
+    
+    </script>
+</html>
